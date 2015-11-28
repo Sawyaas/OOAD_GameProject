@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Brief Description</h1>
+
+<p><b>Destroy building</b></p>
+<p>Allows the player to destroy the building within his base to free up a cell.</p>
+
+<p><b>Check information about building</b></p>
+<p>Allow the Player to check information about a building before creating it or about a building already built on his base.</p>
+
+<p><b>Check information about an unit</b></p>
+<p>Allow the Player to check information about a unit before creating it or about a unit already created on his army.</p>
+
+<p><b>Check information about his own base</b></p>
+<p>Allow the Player to check global information about his base.</p>
+
+<p><b>Check information about another base</b></p>
+<p>Allow the Player to check information about an enemy base on the map.</p>
+
+</body>
+</html>
