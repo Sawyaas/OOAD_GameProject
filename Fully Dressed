@@ -8,7 +8,7 @@
 <p><b>Use Case 1.0:</b>Create a new commander</p>
 <p><b>(Fully Dressed version)</b></p>
 <p><b>Primary Actor:</b>Player.</p>
-<p><b>Secondary Actor:</b>Game.</p>
+<p><b>Secondary Actor:</b>Game/System.</p>
 <p><b>System under discussion:</b>Create Commander option in the Game “Last Whisper”.</p>
 <p><b>Goal in context:</b>Player creates a new commander to save in the game</p>
 <p><b>Level:</b>Summary of steps</p>
@@ -23,26 +23,29 @@
   <ol>
     <li>The Player selects create commander.</li>
     <li>The Player is presented with name commander screen.</li>
-    <li>The system asks the Player to enter between 6 and 12 characters to create a valid name for their commander.</li>
+    <li>The System asks the Player to enter between 6 and 12 characters to create a valid name for their commander.</li>
     <li>The Player enters characters to name their commander.</li>
-    <li>The system validates the Commander name.</li>
-    <li></li>
-    <li></li>
-    <li>The system presents the Player with save Commander option.</li>
-    <li></li>
-    <li></li>
-    <li></li>
+    <li>The System validates the Commander name and completes request to create commander.</li>
+    <li>The System presents the Player with a screen to enhance the commanders abilities.</li>
+    <li>The Player has abilities that can be increased with points, strength, intelligence and luck.</li>
+    <li>The Player increases The Commanders abilities with the available points.</li>
+    <li>The System checks available points,if the Player has enough points it awards the points to selected attributes.</li>
+    <li>The System reduces the points from the players account and resets the commanders attributes.</li>
+    <li>The System presents the Player with save Commander option.</li>
   </ol>
+  
 <p><b>Extensions</b></p>
-<p>5.1a:The Player has not entered a valid name for the commander.</p>
-<p>5.1b:The system displays a commander name error screen.</p>
-<p>5.1c:The system asks the Player to enter a valid name for their commander again.</p>
-<p></p>
-<p></p>
-<p></p>
+
+<p>5a:The Player has not entered a valid name for the commander.</p>
+<p>5b:The system displays a commander name error screen and asks the Player to re-enter a valid name.</p>
+<p>5c:The system displays a valid commander name screen</p>
+
+<p>9a:The system checks the available points, if the number of points available is less than points needed, The system displays an error.</p>
+<p>9b:The System displays a message asking the Player to re-enter the points to the attributes.</p>
+<p>9c:The Player does not have enough points and the system displays an error message informing the player.</p>
 <p></p>
 <p><b></b></p>
-<p><b>Postcondition:</b>Player has a Commander created and save for game play. </p>
+<p><b>Postcondition:</b>Player has a Commander created with added attributes and is saved for future game play. </p>
 
 </body>
 
