@@ -5,17 +5,23 @@
 </head>
 
 <body>
-<p><b>Use Case 1.0:Create a new commander</b></p>
+<p><b>Use Case 1.0:</b>Create a new commander</p>
 <p><b>(Fully Dressed version)</b></p>
-<p><b>Primary Actor: Player.</b></p>
-<p><b>System under discussion: Create Commander option in the Game “Last Whisper”.</b></p>
-<p><b>Goal in context: Player creates a new commander to save in the game</b></p>
-<p><b>Level: Summary of steps</b></p>
-<p><b>Preconditions:  Player has selected new game and has been presented with Create commander screen</b></p>
+<p><b>Primary Actor:</b> Player.</p>
+<p><b>Secondary Actor:</b>Game.</p>
+<p><b>System under discussion:</b> Create Commander option in the Game “Last Whisper”.</p>
+<p><b>Goal in context:</b> Player creates a new commander to save in the game</p>
+<p><b>Level:</b> Summary of steps</p>
+<p><b>Preconditions:</b>  Player has selected new game and has been presented with Create commander screen</p>
+<p><b>Stakeholders and interests</b></p>
+<ul style="list-style-type:none">
+  <li><b>Player:</b>Wants to be able to create a commander, for game play and wants it to be easy</li>
+  <li><b>Game System:</b>wants to be able to record player selection for later use.</li>
+</ul>
 <p><b></b></p>
 <p><b></b></p>
 <p><b></b></p>
-<p><b></b></p>
+<p><b>Postcondition:</b>Player has a Commander created and save fro game play. </p>
 
 </body>
 
