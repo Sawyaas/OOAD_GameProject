@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Create a new commander  Fully Dressed Use Case </title>
+</head>
+
+<body>
+<p><b>Use Case 1.0:Create a new commander</b></p>
+<p><b>(Fully Dressed version)</b></p>
+<p><b>Primary Actor: Player.</b></p>
+<p><b>System under discussion: Create Commander option in the Game “Last Whisper”.</b></p>
+<p><b>Goal in context: Player creates a new commander to save in the game</b></p>
+<p><b>Level: Summary of steps</b></p>
+<p><b>Preconditions:  Player has selected new game and has been presented with Create commander screen</b></p>
+<p><b></b></p>
+<p><b></b></p>
+<p><b></b></p>
+<p><b></b></p>
+
+</body>
+
+</html>
