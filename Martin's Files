@@ -20,7 +20,7 @@
 <h2><u>Workflow</u></h2>
 <ul>
   <li>Determine priority of use case’s (which one has best Business Value) </li>
-  <li>Create Brief, Casual and Fully Dressed Use Cases, taking into account Pre-conditions(what must be true before event), Post-condition(what must be true after event) </li>
+  <li>Create Brief, Casual and Fully Dressed Use Cases, taking into account Pre-conditions<br>(what must be true before event), Post-condition(what must be true after event) </li>
   <li>Carry out detailed textual analysis on Fully Dressed  use case to determine Actors, roles, and tasks. </li>
         <ul>
           <li>Look for ‘nouns’ (People,Places,Things, Transactions)</li>
@@ -32,7 +32,7 @@
         </ul>
   <li>Create UML for code development</li>
   <li>Develop Code </li>
-  <li>Within the code development allow for change, at a later stage the system could require alterations for new ideas, allow for this to be easily accomplished(Abstraction) Good Design is all about flexible software.</li>
+  <li>Within the code development allow for change, at a later stage the system could require alterations <br>for new ideas, allow for this to be easily accomplished(Abstraction) Good Design is all about flexible software.</li>
   <li>Emphasis to be put on SOLID principles, DRY, DIY, 4 OOP fundamentals: </li>
         <ul>
           <li>Encapsulation</li>
@@ -42,7 +42,7 @@
         </ul>
   <li>Commit all work to GIT repository</li>
         <ul>
-        <li>Give clear and precise comments explaining changes made, accountability is key in error discovery at later stages if changes are well documented/commented.</li>
+        <li>Give clear and precise comments explaining changes made, accountability is key in error discovery<br> at later stages if changes are well documented/commented.</li>
         <li>Commit regularly.</li>
         </ul>
   <li></li>
