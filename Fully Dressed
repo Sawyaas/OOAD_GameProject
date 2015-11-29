@@ -7,21 +7,42 @@
 <body>
 <p><b>Use Case 1.0:</b>Create a new commander</p>
 <p><b>(Fully Dressed version)</b></p>
-<p><b>Primary Actor:</b> Player.</p>
+<p><b>Primary Actor:</b>Player.</p>
 <p><b>Secondary Actor:</b>Game.</p>
-<p><b>System under discussion:</b> Create Commander option in the Game “Last Whisper”.</p>
-<p><b>Goal in context:</b> Player creates a new commander to save in the game</p>
-<p><b>Level:</b> Summary of steps</p>
-<p><b>Preconditions:</b>  Player has selected new game and has been presented with Create commander screen</p>
+<p><b>System under discussion:</b>Create Commander option in the Game “Last Whisper”.</p>
+<p><b>Goal in context:</b>Player creates a new commander to save in the game</p>
+<p><b>Level:</b>Summary of steps</p>
+<p><b>Preconditions:</b>Player has selected new game and has been presented with Create commander screen</p>
 <p><b>Stakeholders and interests</b></p>
 <ul style="list-style-type:none">
-  <li><b>Player:</b>Wants to be able to create a commander, for game play and wants it to be easy</li>
+  <li><b>Player:</b>Wants to be able to create a commander, for game play and wants it to be easy.</li>
   <li><b>Game System:</b>wants to be able to record player selection for later use.</li>
 </ul>
+<p><b>Success guarantee:</b>The Player has a commander and can use the commander for all future game play</p>
+<p><b>main Success Scenario</b></p>
+  <ol>
+    <li>The Player selects create commander.</li>
+    <li>The Player is presented with name commander screen.</li>
+    <li>The system asks the Player to enter between 6 and 12 characters to create a valid name for their commander.</li>
+    <li>The Player enters characters to name their commander.</li>
+    <li>The system validates the Commander name.</li>
+    <li></li>
+    <li></li>
+    <li>The system presents the Player with save Commander option.</li>
+    <li></li>
+    <li></li>
+    <li></li>
+  </ol>
+<p><b>Extensions</b></p>
+<p>5.1a:The Player has not entered a valid name for the commander.</p>
+<p>5.1b:The system displays a commander name error screen.</p>
+<p>5.1c:The system asks the Player to enter a valid name for their commander again.</p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
 <p><b></b></p>
-<p><b></b></p>
-<p><b></b></p>
-<p><b>Postcondition:</b>Player has a Commander created and save fro game play. </p>
+<p><b>Postcondition:</b>Player has a Commander created and save for game play. </p>
 
 </body>
 
