@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <h1>Use Case 6.0: Attack Another Base</h1>
+    <strong><i>Primary Actor:</i></strong> Player<br />
+    <strong><i>System under discussion:</i></strong> Turn Based Strategy Game "Last Whisper"<br />
+    <strong><i>Level:</i></strong> Player Goal<br />
+    <strong><i>Preconditions:</i></strong> The player is logged on, has started a new game or loaded a previous one
+    and is on his base map<br />
+    <strong><i>Basic Flow:</i></strong>
+    <ol>
+        <li>Player goes to the map by clicking on the Map button at the top-right of the interface</li>
+        <li>Player selects the target base by clicking on it on the map</li>
+        <li>Player selects the Attack option</li>
+        <li>System checks the total Attack value of the Player’s army and the total Defence value of the target base</li>
+        <li>
+            System determines the winner. The Attack value of the offensive side is 50% higher than the defensive side.
+            Player win
+        </li>
+        <li>
+            A random part of the resources of the target base is given to the Player.
+            A random part of the remaining units of the loser army is given to the Player
+        </li>
+        <li>The target base is destroyed</li>
+        <li>System shows the final battle screen</li>
+        <li>Player come back to the updated map by closing the battle screen</li>
+    </ol>
+    <strong><i>Alternative Flows:</i></strong>
+    <ul>
+        <li>
+            5.a. The Defence value of the defensive side is 50% higher than the Attack value of the offensive side.
+            Player loose.
+        </li>
+        <li>
+            5.b. The Attack value of the offensive side is equals to the Defence value of the defensive side
+            <ol>
+                <li>System randomly determines the winner</li>
+                <li>Player win</li>
+                <li>Resume the Basic Flow at step 6</li>
+            </ol>
+        </li>
+        <li>
+            5.c The Attack value of the offensive side is equals to the Defence value of the defensive side
+            <ol>
+                <li>System randomly determines the winner</li>
+                <li>Player loose</li>
+                <li>Continue to the Alternative Flow 6.a</li>
+            </ol>
+        </li>
+        <li>
+            6.a. A random part of the resources of the Player is given to the attacked enemy.
+            A random part of the remaining units of the Player army is given to the attacked enemy.<br />
+            Skip step 7 and resume the Basic Flow at step 8
+        </li>
+    </ul>
+    <strong><i>Extensions:</i></strong>
+    <ol>
+        <li>
+            <ol>
+                <li>Player check information about a base by clicking on it on the map</li>
+                <li>Player come back to the map by closing the information window</li>
+                <li>Resume to Basic Flow at step 2</li>
+            </ol>
+        </li>
+    </ol>
+    <strong><i>Postconditions:</i></strong> The armies and resources of the both sides are updated.
+    If Player has won, the target base is destroyed and the map is updated.
+</body>
+</html>
