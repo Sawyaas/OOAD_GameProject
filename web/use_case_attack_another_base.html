@@ -13,57 +13,50 @@
     and is on his base map<br />
     <strong><i>Basic Flow:</i></strong>
     <ol>
-        <li>Player goes to the map by clicking on the Map button at the top-right of the interface</li>
-        <li>Player selects the target base by clicking on it on the map</li>
+        <li>Player goes to the map</li>
+        <li>Player selects the target base</li>
         <li>Player selects the Attack option</li>
-        <li>System checks the total Attack value of the Player’s army and the total Defence value of the target base</li>
         <li>
-            System determines the winner. The Attack value of the offensive side is 50% higher than the defensive side.
-            Player win
+            System calculates the total Attack value of the Player’s army as the offensive side and the total
+            Defence value of the target base as the defensive side
         </li>
         <li>
-            A random part of the resources of the target base is given to the Player.
-            A random part of the remaining units of the loser army is given to the Player
+            System determines the winner by comparing the Attack value of the offensive side and the Defence value
+            of the defensive side
+            <ol>
+                <li>
+                    If the Attack value of the offensive side is at least 50% higher than the Defence value
+                    of the defensive side then the offensive side automatically wins
+                </li>
+            </ol>
         </li>
-        <li>The target base is destroyed</li>
+        <li>
+            System gives a random part of the resources and a random part of the remaining units of the winner side
+            to the looser side
+        </li>
         <li>System shows the final battle screen</li>
-        <li>Player come back to the updated map by closing the battle screen</li>
+        <li>Player comes back to the updated map</li>
     </ol>
     <strong><i>Alternative Flows:</i></strong>
     <ul>
         <li>
-            5.a. The Defence value of the defensive side is 50% higher than the Attack value of the offensive side.
-            Player loose.
+            5.1.a. If the Defence value of the defensive side is at least 50% higher than the Attack value
+            of the offensive side then the defensive side automatically wins.
         </li>
         <li>
-            5.b. The Attack value of the offensive side is equals to the Defence value of the defensive side
-            <ol>
-                <li>System randomly determines the winner</li>
-                <li>Player win</li>
-                <li>Resume the Basic Flow at step 6</li>
-            </ol>
+            5.1.b. If the Attack value of the offensive side is equals to the Defence value
+            of the defensive side then System randomly determines the winner
         </li>
         <li>
-            5.c The Attack value of the offensive side is equals to the Defence value of the defensive side
-            <ol>
-                <li>System randomly determines the winner</li>
-                <li>Player loose</li>
-                <li>Continue to the Alternative Flow 6.a</li>
-            </ol>
-        </li>
-        <li>
-            6.a. A random part of the resources of the Player is given to the attacked enemy.
-            A random part of the remaining units of the Player army is given to the attacked enemy.<br />
-            Skip step 7 and resume the Basic Flow at step 8
+            6.1 If the defensive side has lost then System sets the attacked base as destroyed
         </li>
     </ul>
     <strong><i>Extensions:</i></strong>
     <ol>
         <li>
             <ol>
-                <li>Player check information about a base by clicking on it on the map</li>
-                <li>Player come back to the map by closing the information window</li>
-                <li>Resume to Basic Flow at step 2</li>
+                <li>Player check information about a base</li>
+                <li>Player comes back to the map</li>
             </ol>
         </li>
     </ol>
