@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title></title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
+</head>
+<body>
+    <div class="container-fluid">
+        <h1>Use Case 6.0: Attack Another Base</h1>
+        <strong><i>Primary Actor:</i></strong> Player<br />
+        <strong><i>System under discussion:</i></strong> Turn Based Strategy Game "Last Whisper"<br />
+        <strong><i>Level:</i></strong> Player Goal<br />
+        <strong><i>Preconditions:</i></strong> The player is logged on, has started a new game or loaded a previous one
+        and is on his base map.<br />
+        <strong><i>Postconditions:</i></strong> The armies and resources of the both sides are updated.
+        If Player has won, the target base is destroyed and the map is updated.<br />
+        <strong><i>Basic Flow:</i></strong>
+        <ol>
+            <li>Player goes to the map.</li>
+            <li>Player selects the target base.</li>
+            <li>Player selects the attack option.</li>
+            <li>
+                System calculates the total attack value of the Player’s army as the offensive side and the total
+                defence value of the target base as the defensive side.
+            </li>
+            <li>
+                System determines the winner by comparing the attack value of the offensive side and the defence value
+                of the defensive side.<br />
+                If the attack value of the offensive side is at least 50% higher than the defence value
+                of the defensive side then the offensive side automatically wins.
+            </li>
+            <li>
+                System gives a random part of the resources and a random part of the remaining units of the losing side
+                to the winning side.
+            </li>
+            <li>System shows the final battle screen.</li>
+            <li>Player comes back to the updated map.</li>
+        </ol>
+        <strong><i>Alternative Flows:</i></strong>
+        <ul>
+            <li>
+                5.a. If the defence value of the defensive side is at least 50% higher than the attack value
+                of the offensive side then the defensive side automatically wins.
+            </li>
+            <li>
+                5.b. If the attack value of the offensive side is equals to the defence value
+                of the defensive side then System randomly determines the winner.
+            </li>
+            <li>
+                6.1 If the defensive side has lost then System sets the attacked base as destroyed.
+            </li>
+        </ul>
+        <strong><i>Extensions:</i></strong>
+        <ol>
+            <li>
+                <ol>
+                    <li>Player check information about a base.</li>
+                    <li>Player comes back to the map.</li>
+                </ol>
+            </li>
+        </ol>
+    </div>
+</body>
+</html>

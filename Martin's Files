@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1><u>Process</u></h1>
+
+<p>Use Cases (draft):</p>
+<ol type="1">
+  <li>Create a new commander</li>
+  <li>Initialise a new game</li>
+  <li>Create a new building</li>
+  <li>Destroy a building</li>
+  <li>Create a new unit</li>
+  <li>Attack another base</li>
+  <li>Check information about a building</li>
+  <li>Check information about an unit</li>
+  <li>Check information about our own base</li>
+  <li>Check information about another base</li>
+</ol>
+<h2><u>Workflow</u></h2>
+<ul>
+  <li>Determine priority of use case’s (which one has best Business Value) </li>
+  <li>Create Brief, Casual and Fully Dressed Use Cases, taking into account Pre-conditions<br>(what must be true before event), Post-condition(what must be true after event) </li>
+  <li>Carry out detailed textual analysis on Fully Dressed  use case to determine Actors, roles, and tasks. </li>
+        <ul>
+          <li>Look for ‘nouns’ (People,Places,Things, Transactions)</li>
+          <li>Nouns are anything you can put ‘The’ in front of(The warrior, The weapon, The castle)</li>
+          <li>Example: “The roll of the dice is the ‘role’ of a dice”</li>
+          <li>What are the roles of the Actor’s/Players  (As a player ‘I want to do something’ , So that there is a result),</li>
+          <li>Actor/player: User that has permissions.</li>
+          <li>The Requirements : what will the software do? Requirements must cover ALL steps in use cases. </li>
+        </ul>
+  <li>Create UML for code development</li>
+  <li>Develop Code </li>
+  <li>Within the code development allow for change, at a later stage the system could require alterations <br>for new ideas, allow for this to be easily accomplished(Abstraction) Good Design is all about flexible software.</li>
+  <li>Emphasis to be put on SOLID principles, DRY, DIY, 4 OOP fundamentals: </li>
+        <ul>
+          <li>Encapsulation</li>
+          <li>Inheritance</li>
+          <li>Polymorphism</li>
+          <li>Abstraction</li>
+        </ul>
+  <li>Commit all work to GIT repository</li>
+        <ul>
+        <li>Give clear and precise comments explaining changes made, accountability is key in error discovery<br> at later stages if changes are well documented/commented.</li>
+        <li>Commit regularly.</li>
+        </ul>
+  <li></li>
+</ul> 
+
+</body>
+</html>
