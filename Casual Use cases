@@ -4,32 +4,34 @@
 
 <h1>Casual Use cases</h1>
 
-<p><b><u>Create a new commander 1.0</u></b></p>
-<p>Create a new commander(casual version)</p>
+<strong><u>Create a new commander 1.0</u></strong><br>
+Create a new commander(casual version)<br>
 
-<p>Player wants to create a new commander. The player names their commander the system will 
-<p>check if the name is valid. The player sets statistics for their commander, strength, intelligence and
-<p>luck. The system checks if the total of these attributes add up to 30 (30 max)</p>
+<p>Player wants to create a new commander. The player names their commander the system will <br>
+check if the name is valid. The player sets statistics for their commander, strength, intelligence and<br>
+luck. The system checks if the total of these attributes add up to 30 (30 max)<br></p>
 
-<p><b><u>Use case 3.0: Create a new building</u></b></p>
-<p>Create a new building(casual version)</p>
 
-<p>The Player wants to create a new building, The Player will be presented with a list of buildings. 
-<p>The Player selects a building and the system checks to see if the player has the resources to build
-<p>the selected building. If the player has the resources available they will be able to drag and drop
-<p>their selected building to a chosen cell. The system checks if the target cell is free. If the cell
-<p>is free then the selected building is constructed on the chosen cell. At any time prior to completing
-<p>the building the Player can withdraw their building choice and resources will be reimbursed. The Use 
-<p>case ends when the building is complete.</p>
+<strong><u>Use case 3.0: Create a new building</u></strong><br>
+Create a new building(casual version)<br>
 
-<p><b><u>Use case 5.0:Create a new unit</u></b></p>
-<p>Create a new unit(casual version)</p>
+<p>The Player wants to create a new building, The Player will be presented with a list of buildings.<br>
+The Player selects a building and the system checks to see if the player has the resources to build<br>
+the selected building. If the player has the resources available they will be able to drag and drop<br>
+their selected building to a chosen cell. The system checks if the target cell is free. If the cell<br>
+is free then the selected building is constructed on the chosen cell. At any time prior to completing<br>
+the building the Player can withdraw their building choice and resources will be reimbursed. The Use<br>
+case ends when the building is complete.<br></p>
 
-<p>Player wants to delegate their army into units, The player will be shown a list of units. the player
-<p>must selects a unit, The system will check if the player has the required building needed to house 
-<p>the unit.The player will select how many soldiers they want to delegate to that unit the system 
-<p>checks if the needed resources are there if they are the unit is created. The new unit will be 
-<p>created  The system  will reduce the army quantity after the unit is created.</p>
+
+<strong><u>Use case 5.0:Create a new unit</u></strong><br>
+<p>Create a new unit(casual version)<br>
+
+<p>Player wants to delegate their army into units, The player will be shown a list of units. the player<br>
+must selects a unit, The system will check if the player has the required building needed to house<br>
+the unit.The player will select how many soldiers they want to delegate to that unit the system<br>
+checks if the needed resources are there if they are the unit is created. The new unit will be<br>
+created  The system  will reduce the army quantity after the unit is created.<br></p>
 
 
 
