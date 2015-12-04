@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Attack Another Base(Fully Dressed)</title>
+</head>
+<body>
+<h1>Use Case 6.0: Attack Another Base</h1>
+<strong><i>Title:</i> Attack Another Base</strong><br>
+<strong><i>Primary Actor:</i></strong>Player<br>
+<strong><i>System under discussion:</i></strong>Strategy Game “Last Whisper”.<br>
+<strong><i>Level:</i></strong>Player Goal<br>
+<strong><i>Preconditions:</i></strong>The player is logged on, has started a new game or loaded a previous one<br>
+and is on his base map.<br>
+<strong><i>Postconditions:</i></strong>The Resources and army statistics are updated and maps details are reset<br>
+<strong><i>Success Guarantee:</i></strong></strong>The Player has the ability to attach another base in the game.<br>
+
+<strong><i>Basic Flow:</i></strong>
+<ol>
+    <li>The Player goes to the map</li>
+    <li>The Player selects a Base to attack.</li>
+    <li>The Player selects The <i>Attack</i> option.</li>
+    <li>The system calculates the total Attack value of the Player’s army as the offensive side and the<br>
+        total Defence value of the target base as the defensive side.</li>
+    <li>The System determines the winner by comparing the Attack value of the offensive side and the <br>
+        Defence value of the defensive side.If the Attack value of the offensive side is at least 50% higher<br>
+        than the Defence value of the defensive side then the offensive side automatically wins.</li>
+    <li>System gives a random part of the resources and of the remaining units of the losing side to <br>
+        the winning side.</li>
+    <li>System shows the final battle screen.</li>
+    <li>Player comes back to the updated map.</li>
+</ol>
+
+<strong><i>Alternative Flows:</i></strong>
+<ul>
+    <li>5.a:If the Defence value of the defensive side is at least 50% higher than the Attack value <br>
+        of the offensive side then the defensive side automatically wins.</li>
+    <li>5.b:If the Attack value of the offensive side is equals to the Defence value of the defensive side<br>
+        then the System randomly determines the winner.</li>
+    <li>6.1: If the defensive side has lost,the System sets the attacked base as destroyed.</li>
+</ul>
+
+<strong><i>Extensions:</i></strong>
+<ol>
+    <li>Player checks information about a base.</li>
+    <li>Player comes back to the map.</li>
+</ol>
+</body>
+</html>
