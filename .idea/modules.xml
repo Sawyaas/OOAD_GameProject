@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/LastWhisper_Mod/LastWhisper_Mod.iml" filepath="$PROJECT_DIR$/LastWhisper_Mod/LastWhisper_Mod.iml" />
       <module fileurl="file://$PROJECT_DIR$/OOAD_GameProject.iml" filepath="$PROJECT_DIR$/OOAD_GameProject.iml" />
     </modules>
   </component>
