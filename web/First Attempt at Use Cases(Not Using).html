@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>How not to do Use cases.</title>
+    h1,h2 {color:red;}
+
+</head>
+<body>
+    <h1>First Attempt at Use cases</h1>
+    <h3>Only being used as reference to "How not to do Use cases"</h3>
+
+    <h2>Brief Use Cases</h2><br>
+    <strong><i>Use case 1.0:</i></strong>Create a new Commander<br>
+    <strong><i>Primary Actor:</i></strong>Player<br>
+    <strong><i>System under discussion:</i></strong>Turn Based Strategy Game “Last Whisper”<br>
+    <strong><i>Level:</i></strong>Player goal<br>
+    <strong><i>Success Scenario:</i></strong><br>
+
+    <ol>
+        <li>Use case begins when player opens game for the first time.</li>
+        <li>Player gets option to proceed or quit.</li>
+        <li>Player makes selection.</li>
+        <li>Player creates,names, selects control and saves Commander.</li>
+        <li>Use case ends when player exits game.</li>
+    </ol>
+
+    <h2>Casual Use Cases</h2><br>
+    <strong><i>Use Case 1.1: </i></strong>Create a new commander<br>
+    <strong><i>Primary Actor:</i></strong>Player<br>
+    <strong><i>Secondary Actor: </i></strong>Commander<br>
+    <strong><i>System under discussion:</i></strong>Turn Based Strategy Game “Last Whisper”.<br>
+    <strong><i>Level: </i></strong>Player goal<br>
+    <ol>
+        <li>Use case begins when player opens game for the first time.</li>
+        <li>Player is given the option to select New Game, load Game or Exit.</li>
+        <li>Player selects New Game.</li>
+        <li>Game presents create commander screen.</li>
+        <li>Commander must be given a name(between 6 and 12 characters).</li>
+        <li>System selects, names and saves Commander</li>
+        <li>Commanders are saved.</li>
+        <li>Use case terminates when ‘endgame’ is selected.</li>
+    </ol>
+
+    <h2>Casual Use Cases</h2><br>
+    <strong><i>Use Case 1.2:</i></strong>Create a new commander<br>
+    <strong><i>Primary Actor: </i></strong>Player 1,Player 2<br>
+    <strong><i>Secondary Actor:</i></strong>Commander<br>
+    <strong><i>System under discussion: </i></strong>Turn Based Strategy Game “Last Whisper”.<br>
+    <strong><i>Business Scope:</i></strong>The ability within the game to create a Commander as seen by the Players.<br>
+    <strong><i>Level:</i></strong>Summary <br>
+    <strong><i>Preconditions: </i></strong>Player must have game installed on their computer.<br>
+    <strong><i>Success Scenario:</i></strong><br>
+    <ol>
+        <li>Use case begins when player opens game for the first time.</li>
+        <li>Player is given the option to select New Game, Load Game or Exit.
+            <ul>When selecting New Game the Player is given the option to Create and Name their Commander. </ul>
+            <ul>When  selecting Load Game the Players current saved game will be loaded for continuation<br>
+                from where the Player left off.</ul>
+        </li>
+    </ol>
+
+    <h2>What I Learned from the process above</h2>
+    <strong>Learning curve</strong>
+     <p>From the above process I learned that ‘my’ understanding of having to have a Brief, casual and<br>
+        fully dressed Use Case for every Use Case was not the correct way to work through them.<br>
+
+    <strong>Precondition</strong><br>
+        What I learned from the above attempts was how to establish what a Precondition is, A <br>
+        precondition is simply a starting point for the Use Case to begin at. Use case begins with<br>
+        some conditions met).</p>
+
+    <h2>Example of Use case with Precondition</h2>
+
+        <strong><i>Withdrawer cash Use Case 1.0:</i></strong><br>
+        <strong><i>Withdrawer cash</i></strong>Customer<br>
+        <strong><i>Primary Actor:</i></strong><br>
+        <strong><i>Precondition:</i></strong>Card details have been validated and cash is available to account holder.
+
+            <ol>
+                <li>The system presents the customer with Withdrawal Amount Screen</li>
+                <li>The customer enters Withdrawal Amount .</li>
+                <li>The system checks the withdrawal amount is not greater than the amount <br>
+                    in the customer's account.</li>
+                <li>If the Withdrawal Amount  is less than the amount being sought the system pays out the cash.</li>
+                <li>The system updates the customer's account details.</li>
+                <li>The system asks if another service is requested.</li>
+                <li>The system resets. </li>
+            </ol>
+
+
+
+</body>
+</html>
