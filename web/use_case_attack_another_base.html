@@ -4,65 +4,127 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title></title>
+    <title>Use Case Attack Another Base</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha/css/bootstrap.min.css" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="./design/global.css" />
 </head>
 <body>
-    <div class="container-fluid">
-        <h1>Use Case 6.0: Attack Another Base</h1>
-        <strong><i>Primary Actor:</i></strong> Player<br />
-        <strong><i>System under discussion:</i></strong> Turn Based Strategy Game "Last Whisper"<br />
-        <strong><i>Level:</i></strong> Player Goal<br />
-        <strong><i>Preconditions:</i></strong> The player is logged on, has started a new game or loaded a previous one
-        and is on his base map.<br />
-        <strong><i>Postconditions:</i></strong> The armies and resources of the both sides are updated.
-        If Player has won, the target base is destroyed and the map is updated.<br />
-        <strong><i>Basic Flow:</i></strong>
-        <ol>
-            <li>Player goes to the map.</li>
-            <li>Player selects the target base.</li>
-            <li>Player selects the attack option.</li>
-            <li>
-                System calculates the total attack value of the Player’s army as the offensive side and the total
-                defence value of the target base as the defensive side.
+    <div class="container">
+        <h2>Fully Dressed Use Cases (2/2)</h2>
+
+        <div class="entry">
+            <span class="term">Use Case Id:</span> 6.0
+        </div>
+        <div class="entry">
+            <span class="term">Use Case Title:</span> Attack Another Base
+        </div>
+        <div class="entry">
+            <span class="term">Primary Actor:</span> Player
+        </div>
+        <div class="entry">
+            <span class="term">System under discussion:</span> Turn Based Strategy Game "Last Whisper"
+        </div>
+        <div class="entry">
+            <span class="term">Level:</span> Player Goal
+        </div>
+        <div class="entry">
+            <span class="term">Pre-conditions:</span> The player is logged on, has started a new game
+            or loaded a previous one and is on his base map.
+        </div>
+        <div class="entry">
+            <span class="term">Post-conditions:</span> The armies and resources of the both sides
+            are updated. If Player has won, the target base is destroyed and the map is updated.
+        </div>
+        <div class="entry">
+            <span class="term">Basic Flow:</span>
+        </div>
+        <ul class="list-unstyled">
+            <li class="row">
+                <div class="col-xs-1">1.</div>
+                <div class="col-xs-11">Player goes to the map.</div>
             </li>
-            <li>
-                System determines the winner by comparing the attack value of the offensive side and the defence value
-                of the defensive side.<br />
-                If the attack value of the offensive side is at least 50% higher than the defence value
-                of the defensive side then the offensive side automatically wins.
+            <li class="row">
+                <div class="col-xs-1">2.</div>
+                <div class="col-xs-11">Player selects the target base.</div>
             </li>
-            <li>
-                System gives a random part of the resources and a random part of the remaining units of the losing side
-                to the winning side.
+            <li class="row">
+                <div class="col-xs-1">3.</div>
+                <div class="col-xs-11">Player selects the attack option.</div>
             </li>
-            <li>System shows the final battle screen.</li>
-            <li>Player comes back to the updated map.</li>
-        </ol>
-        <strong><i>Alternative Flows:</i></strong>
-        <ul>
-            <li>
-                5.a. If the defence value of the defensive side is at least 50% higher than the attack value
-                of the offensive side then the defensive side automatically wins.
+            <li class="row">
+                <div class="col-xs-1">4.</div>
+                <div class="col-xs-11">
+                    System calculates the total attack value of the Player’s army as the offensive side
+                    and the total defence value of the target base as the defensive side.
+                </div>
             </li>
-            <li>
-                5.b. If the attack value of the offensive side is equals to the defence value
-                of the defensive side then System randomly determines the winner.
+            <li class="row">
+                <div class="col-xs-1">5.</div>
+                <div class="col-xs-11">
+                    System determines the winner by comparing the attack value of the offensive side
+                    and the defence value of the defensive side.<br />
+                    If the attack value of the offensive side is at least 50% higher than the
+                    defence value of the defensive side then the offensive side automatically wins.
+                </div>
             </li>
-            <li>
-                6.1 If the defensive side has lost then System sets the attacked base as destroyed.
+            <li class="row">
+                <div class="col-xs-1">6.</div>
+                <div class="col-xs-11">
+                    System gives a random part of the resources and a random part of the
+                    remaining units of the losing side to the winning side.
+                </div>
+            </li>
+            <li class="row">
+                <div class="col-xs-1">7.</div>
+                <div class="col-xs-11">System shows the final battle screen.</div>
+            </li>
+            <li class="row">
+                <div class="col-xs-1">8.</div>
+                <div class="col-xs-11">Player comes back to the updated map.</div>
             </li>
         </ul>
-        <strong><i>Extensions:</i></strong>
-        <ol>
-            <li>
-                <ol>
-                    <li>Player check information about a base.</li>
-                    <li>Player comes back to the map.</li>
-                </ol>
+        <div class="entry">
+            <span class="term">Alternative Flows:</span>
+        </div>
+        <ul class="list-unstyled">
+            <li class="row">
+                <div class="col-xs-1">5.a.</div>
+                <div class="col-xs-11">
+                    If the defence value of the defensive side is at least 50% higher than the
+                    attack value of the offensive side then the defensive side automatically wins.
+                </div>
             </li>
-        </ol>
+            <li class="row">
+                <div class="col-xs-1">5.b.</div>
+                <div class="col-xs-11">
+                    If the attack value of the offensive side is equals to the defence value of
+                    the defensive side then System randomly determines the winner.
+                </div>
+            </li>
+            <li class="row">
+                <div class="col-xs-1">6.1.</div>
+                <div class="col-xs-11">
+                    If the defensive side has lost then System sets the attacked base as destroyed.
+                </div>
+            </li>
+        </ul>
+        <div class="entry">
+            <span class="term">Extensions:</span>
+        </div>
+        <ul class="list-unstyled">
+            <li class="row">
+                <div class="col-xs-1">1.1.</div>
+                <div class="col-xs-11">Player check information about a base.</div>
+            </li>
+            <li class="row">
+                <div class="col-xs-1">1.2.</div>
+                <div class="col-xs-11">Player comes back to the map.</div>
+            </li>
+        </ul>
+        <div>
+            <a href="index.html">Back to Summary</a>
+        </div>
     </div>
 </body>
 </html>

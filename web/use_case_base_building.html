@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Base Building Use Case</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="./design/global.css" />
+</head>
+<body>
+    <div class="container">
+        <h2>Fully Dressed Use Cases (1/2)</h2>
+
+        <div class="entry">
+            <span class="term">Use Case Id:</span> 2.0
+        </div>
+        <div class="entry">
+            <span class="term">Use Case Title:</span> Base Building
+        </div>
+        <div class="entry">
+            <span class="term">Primary Actor:</span> Player
+        </div>
+        <div class="entry">
+            <span class="term">Secondary Actor:</span> System
+        </div>
+        <div class="entry">
+            <span class="term">System Under Discussion:</span> Real Time Strategy Game “Last Whisper”
+        </div>
+        <div class="entry">
+            <span class="term">Level:</span> Player Goal
+        </div>
+        <div class="entry">
+            <span class="term">Pre-conditions:</span> Player is in-game and has created a character.
+        </div>
+        <div class="entry">
+            <span class="term">Post-conditions:</span> The Player’s base has been updated, buildings
+            and army units add to the base’s defence value. The players stock has been reduced to
+            reflect the player’s base edit.
+        </div>
+        <div class="entry">
+            <span class="term">Basic Flow:</span>
+        </div>
+        <ul class="list-unstyled">
+            <li class="row">
+                <div class="col-xs-1">1.</div>
+                <div class="col-xs-11">Player selects “Build Base” option.</div>
+            </li>
+            <li class="row">
+                <div class="col-xs-1">2.</div>
+                <div class="col-xs-11">Player selects base type - Premade base or Empty base.</div>
+            </li>
+            <li class="row">
+                <div class="col-xs-2">2.1.</div>
+                <div class="col-xs-10">
+                    By selecting a premade base the player is given key start off buildings
+                    in their base such as a barracks, storage shed and farm. Players wood and stone
+                    stock will be reduced straight away.
+                </div>
+            </li>
+            <li class="row">
+                <div class="col-xs-2">2.2.</div>
+                <div class="col-xs-10">
+                    By selecting the empty base the player is given an empty lot with basic walls.
+                </div>
+            </li>
+            <li class="row">
+                <div class="col-xs-1">3.</div>
+                <div class="col-xs-11">Player drags and drops base onto a section of the game map.</div>
+            </li>
+            <li class="row">
+                <div class="col-xs-2">3.1.</div>
+                <div class="col-xs-10">
+                    The lot the player chooses cannot be preoccupied by any other base.
+                </div>
+            </li>
+            <li class="row">
+                <div class="col-xs-1">4.</div>
+                <div class="col-xs-11">Player enters Edit Mode.</div>
+            </li>
+            <li class="row">
+                <div class="col-xs-1">5.</div>
+                <div class="col-xs-11">System displays Base in grid format.</div>
+            </li>
+            <li class="row">
+                <div class="col-xs-1">6.</div>
+                <div class="col-xs-11">Player selects edit option - Building Edit and Unit Edit.</div>
+            </li>
+            <li class="row">
+                <div class="col-xs-2">6.1.</div>
+                <div class="col-xs-10">
+                    A sub-option of “Defence Edit” will be made available when a Lab is built
+                    on base. This will allow Siege Equipment and Ballistas to be added to the base.
+                </div>
+            </li>
+            <li class="row">
+                <div class="col-xs-1">7.</div>
+                <div class="col-xs-11">Player enters Building Edit.</div>
+            </li>
+            <li class="row">
+                <div class="col-xs-1">8.</div>
+                <div class="col-xs-11">
+                    System displays  a selection of buildings available to the player dependent on
+                    the player’s wood and stone count.
+                </div>
+            </li>
+            <li class="row">
+                <div class="col-xs-2">8.1.</div>
+                <div class="col-xs-10">
+                    The buildings available shall be  Barracks, Fighting Range, Archery Range,
+                    Kennels, Stables, Labs, Food Storage, Farms, and Walls.
+                </div>
+            </li>
+            <li class="row">
+                <div class="col-xs-1">9.</div>
+                <div class="col-xs-11">Player uses drag and drop to place a building in their base.</div>
+            </li>
+            <li class="row">
+                <div class="col-xs-2">9.1.</div>
+                <div class="col-xs-10">System determines if cell is empty.</div>
+            </li>
+            <li class="row">
+                <div class="col-xs-1">10.</div>
+                <div class="col-xs-11">Player’s wood and stone count reduces with each building built.</div>
+            </li>
+            <li class="row">
+                <div class="col-xs-1">11.</div>
+                <div class="col-xs-11">Player returns to Edit Mode.</div>
+            </li>
+            <li class="row">
+                <div class="col-xs-1">12.</div>
+                <div class="col-xs-11">Player enters Unit Edit.</div>
+            </li>
+            <li class="row">
+                <div class="col-xs-2">12.1.</div>
+                <div class="col-xs-10">
+                    Player must have a Barrack on their base in order to access this function.
+                </div>
+            </li>
+            <li class="row">
+                <div class="col-xs-1">13.</div>
+                <div class="col-xs-11">
+                    System presents player with their current army and a number of empty unit fields.
+                </div>
+            </li>
+            <li class="row">
+                <div class="col-xs-2">13.1.</div>
+                <div class="col-xs-10">
+                    The Unit Fields available will include Swordsmen, Spearmen, Archers, Dogs and Cavalry.
+                </div>
+            </li>
+            <li class="row">
+                <div class="col-xs-1">14.</div>
+                <div class="col-xs-11">
+                    Player delegates a number of their soldiers to a unit increasing their defence value.
+                </div>
+            </li>
+            <li class="row">
+                <div class="col-xs-2">14.1.</div>
+                <div class="col-xs-10">
+                    Player may access these units only if they have the required building on base.
+                </div>
+            </li>
+            <li class="row">
+                <div class="col-xs-2">14.2.</div>
+                <div class="col-xs-10">
+                    Archers require an Archery Range, Dogs require a Kennel, Cavalry require Stables etc.
+                </div>
+            </li>
+            <li class="row">
+                <div class="col-xs-1">15.</div>
+                <div class="col-xs-11">Player returns to Edit Mode and saves.</div>
+            </li>
+            <li class="row">
+                <div class="col-xs-1">16.</div>
+                <div class="col-xs-11">
+                    Use case ends when Player commits to save and exits to game map.
+                </div>
+            </li>
+        </ul>
+        <div>
+            <a href="index.html">Back to Summary</a>
+        </div>
+    </div>
+</body>
+</html>
