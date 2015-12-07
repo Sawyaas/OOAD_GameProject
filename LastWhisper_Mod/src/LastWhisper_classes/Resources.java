@@ -13,4 +13,28 @@ public class Resources {
         this.woodQuantity = woodQuantity;
         this.stoneQuantity = stoneQuantity;
     }
+
+    public int getFoodQuantity() {
+        return foodQuantity;
+    }
+
+    public int getWoodQuantity() {
+        return woodQuantity;
+    }
+
+    public int getStoneQuantity() {
+        return stoneQuantity;
+    }
+
+    public void setFoodQuantity(int foodQuantity) {
+        this.foodQuantity = foodQuantity;
+    }
+
+    public void setWoodQuantity(int woodQuantity) {
+        this.woodQuantity = woodQuantity;
+    }
+
+    public void setStoneQuantity(int stoneQuantity) {
+        this.stoneQuantity = stoneQuantity;
+    }
 }
