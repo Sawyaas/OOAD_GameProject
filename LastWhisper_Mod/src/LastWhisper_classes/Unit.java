@@ -13,4 +13,16 @@ public class Unit {
         this.attackValue = attackValue;
         this.defenceValue = defenceValue;
     }
+
+    public String getName() {
+        return name;
+    }
+
+    public int getAttackValue() {
+        return attackValue;
+    }
+
+    public int getDefenceValue() {
+        return defenceValue;
+    }
 }
