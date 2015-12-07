@@ -6,11 +6,11 @@ package LastWhisper_classes;
 public class Cell {
     private int xPosition;
     private int yPosition;
-    private boolean isVacant;
+    private Base base;
 
     public Cell(int xPosition, int yPosition, boolean isVacant) {
         this.xPosition = xPosition;
         this.yPosition = yPosition;
-        this.isVacant = isVacant;
+
     }
 }

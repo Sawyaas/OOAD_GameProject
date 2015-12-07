@@ -5,6 +5,11 @@ package LastWhisper_classes;
  */
 public class Commander {
 
+    public void transferResources(){
+
+
+    }
+
 
 
 }
