@@ -8,9 +8,28 @@ public class Cell {
     private int yPosition;
     private Base base;
 
-    public Cell(int xPosition, int yPosition, boolean isVacant) {
+
+    public Cell(int xPosition, int yPosition) {
         this.xPosition = xPosition;
         this.yPosition = yPosition;
 
+    }
+
+
+    public void setBase(Base base) {
+        this.base = base;
+    }
+
+    public int getxPosition() {
+
+        return xPosition;
+    }
+
+    public int getyPosition() {
+        return yPosition;
+    }
+
+    public Base getBase() {
+        return base;
     }
 }
