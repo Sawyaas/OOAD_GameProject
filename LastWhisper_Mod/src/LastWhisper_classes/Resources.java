@@ -14,9 +14,7 @@ public class Resources {
         this.stoneQuantity = stoneQuantity;
     }
 
-    public int getFoodQuantity() {
-        return foodQuantity;
-    }
+    public int getFoodQuantity() { return foodQuantity; }
 
     public int getWoodQuantity() {
         return woodQuantity;
