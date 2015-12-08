@@ -10,7 +10,7 @@ ul li + li, ol li + li, ul ul > li:first-child{margin-top:0.7rem;}
 ul > li > .link-icon{display:none;}
 ul > li:hover > .link-icon{display:inline;}
 
-.use-cases > .title{font-size:1.2rem;font-weight:bold;}
+.use-cases > .title, p > .title{font-size:1.2rem;font-weight:bold;}
 .use-cases > p{margin-top:0.6rem;margin-bottom:1.2rem;}
 
 .entry{font-size:1.2rem;}
