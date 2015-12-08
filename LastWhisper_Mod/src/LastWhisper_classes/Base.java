@@ -10,8 +10,6 @@ public class Base {
     private Base transferUnits;
     private Base destroy;
 
-
-
     public Base(int attack, int defence, Base displayInfo, Base transferUnits, Base destroy) {
         this.attack = attack;
         this.defence = defence;
