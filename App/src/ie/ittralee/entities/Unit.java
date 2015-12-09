@@ -4,17 +4,17 @@ package ie.ittralee.entities;
  * Created by Martin on 04/12/2015.
  */
 public class Unit {
-    private String name;
+    private UnitName name;
     private int attackValue;
     private int defenceValue;
 
-    public Unit(String name, int attackValue, int defenceValue) {
+    public Unit(UnitName name, int attackValue, int defenceValue) {
         this.name = name;
         this.attackValue = attackValue;
         this.defenceValue = defenceValue;
     }
 
-    public String getName() {
+    public UnitName getName() {
         return name;
     }
 
