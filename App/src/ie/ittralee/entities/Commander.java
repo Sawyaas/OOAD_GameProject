@@ -8,12 +8,16 @@ import java.util.*;
 public class Commander {
     /* --- ATTRIBUTES --- */
 
-    private Resources stock;
+    private final CommanderControl commanderControl;
+    private final Resources stock;
 
 
     /* --- CONSTRUCTORS --- */
 
-    public Commander() { }
+    public Commander(CommanderControl commanderControl, Resources stock) {
+        this.commanderControl = commanderControl;
+        this.stock = stock;
+    }
 
 
     /* --- GETTERS --- */
