@@ -17,7 +17,10 @@ public class Base {
 
     /* --- CONSTRUCTORS --- */
 
-    public Base() { }
+    public Base(Commander commander, Army army) {
+        this.commander = commander;
+        this.army = army;
+    }
 
 
     /* --- GETTERS --- */
