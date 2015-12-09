@@ -79,11 +79,11 @@ public class GameInfo {
     private void initBases() {
         baseList.add(new Base(
                 commanderList.get(0),
-                new Army(15, 10, 15, 5, 2, 5)
+                new Army(26, 11, 17, 7, 4, 8)
         ));
         baseList.add(new Base(
                 commanderList.get(1),
-                new Army(10, 5, 8, 0, 5, 5)
+                new Army(10, 5, 10, 0, 150, 20)
         ));
     }
 
