@@ -32,6 +32,21 @@ public class Map {
     /* --- METHODS --- */
 
     public void display() {
-        // TODO
+        System.out.println("----------\nMap:");
+        for (Cell cell : cells) {
+            String display = "Cell ["
+                    + cell.getxPosition() + ","
+                    + cell.getyPosition() + "] => ";
+            if (cell.getBase() == null)
+                display += "Empty";
+            else {
+                if (cell.getBase().getCommander().getCommanderControl() == CommanderControl.PLAYER)
+                    display += "Player's Base";
+                else
+                    display += "AI's Base";
+            }
+            System.out.println(display);
+        }
+        System.out.println("----------");
     }
 }

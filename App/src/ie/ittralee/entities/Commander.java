@@ -22,6 +22,10 @@ public class Commander {
 
     /* --- GETTERS --- */
 
+    public CommanderControl getCommanderControl() {
+        return commanderControl;
+    }
+
     public Resources getStock() {
         return stock;
     }
