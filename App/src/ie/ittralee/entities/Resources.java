@@ -5,13 +5,13 @@ package ie.ittralee.entities;
  */
 public class Resources {
     private int foodQuantity;
-    private int woodQuantity;
     private int stoneQuantity;
+    private int woodQuantity;
 
-    public Resources(int foodQuantity, int woodQuantity, int stoneQuantity) {
+    public Resources(int foodQuantity, int stoneQuantity, int woodQuantity) {
         this.foodQuantity = foodQuantity;
-        this.woodQuantity = woodQuantity;
         this.stoneQuantity = stoneQuantity;
+        this.woodQuantity = woodQuantity;
     }
 
     public int getFoodQuantity() { return foodQuantity; }
