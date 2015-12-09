@@ -46,6 +46,13 @@ public class GameInfo {
         return units;
     }
 
+    public List<Base> getBaseList() {
+        return baseList;
+    }
+
+    public ie.ittralee.entities.Map getMap() {
+        return map;
+    }
 
     /* --- METHODS --- */
 
