@@ -17,13 +17,21 @@ public class Main {
 
         /* UC_6.0 Simulation */
 
-        System.out.println("Player goes to the map.");
+        System.out.println("\n-> Player goes to the map.\n");
         map.display();
 
-        System.out.println("Player check the enemy base's info.");
+        try {
+            Thread.sleep(3000);
+        } catch (InterruptedException e){ }
+
+        System.out.println("\n-> Player check the enemy base's info.\n");
         ennemyBase.displayInfo();
 
-        System.out.println("Player attack the enemy base.");
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException e){ }
+
+        System.out.println("\n-> Player attack the enemy base.\n");
         ennemyBase.attack(playerBase);
     }
 }
