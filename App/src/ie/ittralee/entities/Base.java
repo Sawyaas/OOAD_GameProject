@@ -130,7 +130,20 @@ public class Base {
     }
 
     public void displayInfo() {
-        // TODO
+        String display = "----------\n"
+                + ((commander.getCommanderControl() == CommanderControl.PLAYER) ? "Player" : "AI")
+                + "'s Base:";
+        display += "\n\t- Swordmen: " + army.getNumOfSwordmen();
+        display += "\n\t- Dogs: " + army.getNumOfDogs();
+        display += "\n\t- Spearmen: " + army.getNumOfSpearmen();
+        display += "\n\t- Cavalries: " + army.getNumOfCavalries();
+        display += "\n\t- Siege Equipments: " + army.getNumOfSiegeEquipment();
+        display += "\n\t- Archers: " + army.getNumOfArchers();
+        display += "\n- Attack Value: " + army.sumAttackValues();
+        display += "\n- Defence Value: " + army.sumDefenceValues();
+        display += "\n----------";
+
+        System.out.println(display);
     }
 
     public static void transferUnits(Base from, Base to, java.util.Map<UnitName, Integer> units) {

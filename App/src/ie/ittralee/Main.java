@@ -24,14 +24,21 @@ public class Main {
             Thread.sleep(3000);
         } catch (InterruptedException e){ }
 
-        System.out.println("\n-> Player check the enemy base's info.\n");
+        System.out.println("\n-> Player checks its base's info.\n");
+        playerBase.displayInfo();
+
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException e){ }
+
+        System.out.println("\n-> Player checks the enemy base's info.\n");
         ennemyBase.displayInfo();
 
         try {
             Thread.sleep(2000);
         } catch (InterruptedException e){ }
 
-        System.out.println("\n-> Player attack the enemy base.\n");
+        System.out.println("\n-> Player attacks the enemy base.\n");
         ennemyBase.attack(playerBase);
     }
 }
