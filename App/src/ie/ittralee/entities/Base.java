@@ -1,8 +1,10 @@
 package ie.ittralee.entities;
 
 import com.sun.org.apache.xerces.internal.impl.xpath.regex.Match;
+import ie.ittralee.GameInfo;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -49,19 +51,17 @@ public class Base {
         boolean attackerWon;
         if (attackValue >= defenceValue + defenceValue * 0.5){   // At least 50% higher
             // Offensive side automatically wins
+            System.out.println("* Attack value at least 50% higher than the defence value => Player automatically wins *");
             attackerWon = true;
         } else if (defenceValue >= attackValue + attackValue * 0.5) {    // At least 50% higher
             // Defensive side automatically wins
+            System.out.println("* Defence value at least 50% higher than the attack value => AI automatically wins *");
             attackerWon = false;
         } else {
+            System.out.print("* None of the both values is at least 50% higher than the other => Random determination of the winner... ");
             double randomValue = Math.random();
-            if (randomValue < 0.5) {
-                // Defensive side randomly wins
-                attackerWon = false;
-            } else {
-                // Offensive side randomly wins
-                attackerWon = true;
-            }
+            attackerWon = randomValue >= 0.5;
+            System.out.println(((attackerWon) ? "Player" : "AI") + " wins *");
         }
 
         /* Give a random part of the resources and of the remaining units of the losing side
@@ -71,25 +71,27 @@ public class Base {
         Base losingSide = (attackerWon) ? this : attacker;
         Resources looserStock = losingSide.commander.getStock();
         Army looserArmy = losingSide.army;
-        Map<ResourceName, Integer> resourcesGiven = new HashMap<ResourceName, Integer>();
-        Map<UnitName, Integer> unitsGiven = new HashMap<UnitName, Integer>();
+        Map<ResourceName, Integer> resourcesGiven = new HashMap<>();
+        Map<UnitName, Integer> unitsGiven = new HashMap<>();
 
-        int percentage = (int) Math.random() * 10 + 11;  // Random % between 11 and 20
+        int percentage = (int)(Math.random() * 10 + 11);  // Random % between 11 and 20
 
-        int food = looserStock.getFoodQuantity() * (percentage/100);
-        int stone = looserStock.getStoneQuantity() * (percentage/100);
-        int wood = looserStock.getWoodQuantity() * (percentage/100);
+        System.out.println("* The loosing side will give " + percentage + "% of its resources and units *\n");
+
+        int food = (int)(looserStock.getFoodQuantity() * (percentage/100.d));
+        int stone = (int)(looserStock.getStoneQuantity() * (percentage/100.d));
+        int wood = (int)(looserStock.getWoodQuantity() * (percentage/100.d));
 
         resourcesGiven.put(ResourceName.FOOD, food);
         resourcesGiven.put(ResourceName.STONE, stone);
         resourcesGiven.put(ResourceName.WOOD, wood);
 
-        int swordmen = looserArmy.getNumOfSwordmen() * (percentage/100);
-        int dogs = looserArmy.getNumOfDogs() * (percentage/100);
-        int spearmen = looserArmy.getNumOfSpearmen() * (percentage/100);
-        int cavalries = looserArmy.getNumOfCavalries() * (percentage/100);
-        int siegeEquipments = looserArmy.getNumOfSiegeEquipment() * (percentage/100);
-        int archers = looserArmy.getNumOfArchers() * (percentage/100);
+        int swordmen = (int)(looserArmy.getNumOfSwordmen() * (percentage/100.d));
+        int dogs = (int)(looserArmy.getNumOfDogs() * (percentage/100.d));
+        int spearmen = (int)(looserArmy.getNumOfSpearmen() * (percentage/100.d));
+        int cavalries = (int)(looserArmy.getNumOfCavalries() * (percentage/100.d));
+        int siegeEquipments = (int)(looserArmy.getNumOfSiegeEquipment() * (percentage/100.d));
+        int archers = (int)(looserArmy.getNumOfArchers() * (percentage/100.d));
 
         unitsGiven.put(UnitName.SWORDMEN, swordmen);
         unitsGiven.put(UnitName.DOGS, dogs);
@@ -110,6 +112,7 @@ public class Base {
 
         String result = (attackerWon) ? "won" : "lost";
         String finalOutput =
+                "\n----------\nFinal Battle Screen:\n" +
                 "You have " + result + "!\n" +
                 "Resources " + result + ":\n" +
                 "\t- " + food + " Food\n" +
@@ -121,12 +124,25 @@ public class Base {
                 "\t- " + spearmen + " Spearmen\n" +
                 "\t- " + cavalries + " Cavalries\n" +
                 "\t- " + siegeEquipments + " Siege Equipments\n" +
-                "\t- " + archers + " Archers";
+                "\t- " + archers + " Archers" +
+                "\n----------";
         System.out.println(finalOutput);
     }
 
     public void destroy() {
-        // TODO
+        System.out.println("----------\nThe base is destroyed\n----------");
+
+        GameInfo gameInfo = GameInfo.getInstance();
+
+        for (Cell cell : gameInfo.getMap().getCells())
+            if (cell.getBase() == this)
+                cell.setBase(null);
+
+        List<Base> baseList = gameInfo.getBaseList();
+
+        for (int i = 0; i < baseList.size(); i++)
+            if (baseList.get(i) == this)
+                baseList.remove(i);
     }
 
     public void displayInfo() {
