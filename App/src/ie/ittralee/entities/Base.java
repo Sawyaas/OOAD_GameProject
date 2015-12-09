@@ -1,4 +1,4 @@
-package LastWhisper_classes;
+package ie.ittralee.entities;
 
 /**
  * Created by Martin on 04/12/2015.
