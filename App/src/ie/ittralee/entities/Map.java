@@ -28,6 +28,10 @@ public class Map {
         return null;
     }
 
+    public Cell[] getCells() {
+        return cells;
+    }
+
 
     /* --- METHODS --- */
 
