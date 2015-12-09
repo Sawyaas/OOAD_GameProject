@@ -1,5 +1,9 @@
 package ie.ittralee.entities;
 
+import ie.ittralee.GameInfo;
+
+import java.util.*;
+
 /**
  * Created by Martin on 04/12/2015.
  */
@@ -66,5 +70,36 @@ public class Army {
 
     public void setNumOfArchers(int numOfArchers) {
         this.numOfArchers = numOfArchers;
+    }
+
+
+    /* --- METHODS --- */
+
+    public int sumAttackValues() {
+        int sum = 0;
+        java.util.Map<UnitName, Unit> units = GameInfo.getInstance().getUnits();
+
+        sum += numOfSwordmen * units.get(UnitName.SWORDMEN).getAttackValue();
+        sum += numOfDogs * units.get(UnitName.DOGS).getAttackValue();
+        sum += numOfSpearmen * units.get(UnitName.SPEARMEN).getAttackValue();
+        sum += numOfCavalries * units.get(UnitName.CAVALRIES).getAttackValue();
+        sum += numOfSiegeEquipment * units.get(UnitName.SIEGE_EQUIPMENTS).getAttackValue();
+        sum += numOfArchers * units.get(UnitName.ARCHERS).getAttackValue();
+
+        return sum;
+    }
+
+    public int sumDefenceValues() {
+        int sum = 0;
+        java.util.Map<UnitName, Unit> units = GameInfo.getInstance().getUnits();
+
+        sum += numOfSwordmen * units.get(UnitName.SWORDMEN).getDefenceValue();
+        sum += numOfDogs * units.get(UnitName.DOGS).getDefenceValue();
+        sum += numOfSpearmen * units.get(UnitName.SPEARMEN).getDefenceValue();
+        sum += numOfCavalries * units.get(UnitName.CAVALRIES).getDefenceValue();
+        sum += numOfSiegeEquipment * units.get(UnitName.SIEGE_EQUIPMENTS).getDefenceValue();
+        sum += numOfArchers * units.get(UnitName.ARCHERS).getDefenceValue();
+
+        return sum;
     }
 }
