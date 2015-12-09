@@ -18,6 +18,17 @@ public class Map {
     }
 
 
+    /* --- GETTERS --- */
+
+    public Cell getCell(int x, int y) {
+        for (Cell cell : cells)
+            if (cell.getxPosition() == x && cell.getyPosition() == y)
+                return cell;
+
+        return null;
+    }
+
+
     /* --- METHODS --- */
 
     public void display() {
