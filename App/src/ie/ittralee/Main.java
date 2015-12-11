@@ -13,7 +13,7 @@ public class Main {
         GameInfo gameInfo = GameInfo.getInstance();
         Map map = gameInfo.getMap();
         Base playerBase = gameInfo.getBaseList().get(0);
-        Base ennemyBase = gameInfo.getBaseList().get(1);
+        Base enemyBase = gameInfo.getBaseList().get(1);
 
         /* UC_6.0 Simulation */
 
@@ -32,13 +32,13 @@ public class Main {
         } catch (InterruptedException e){ }
 
         System.out.println("\n-> Player checks the enemy base's info.\n");
-        ennemyBase.displayInfo();
+        enemyBase.displayInfo();
 
         try {
             Thread.sleep(2000);
         } catch (InterruptedException e){ }
 
         System.out.println("\n-> Player attacks the enemy base.\n");
-        ennemyBase.attack(playerBase);
+        enemyBase.attack(playerBase);
     }
 }
