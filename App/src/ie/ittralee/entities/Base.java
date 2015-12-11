@@ -174,6 +174,48 @@ public class Base {
     }
 
     public static void transferUnits(Base from, Base to, java.util.Map<UnitName, Integer> units) {
-        // TODO
+
+        int swords = from.getArmy().getNumOfSwordmen() - units.get(UnitName.SWORDMEN);
+        from.getArmy().setNumOfSwordmen(swords);
+
+        System.out.print(swords);
+
+
+        int spears = from.getArmy().getNumOfSpearmen() - units.get(UnitName.SPEARMEN);
+        from.getArmy().setNumOfSpearmen(spears);
+
+        System.out.print(spears);
+
+
+        int dogs = from.getArmy().getNumOfDogs() - units.get(UnitName.DOGS);
+        from.getArmy().setNumOfDogs(dogs);
+
+        System.out.print(dogs);
+
+
+        int horse = from.getArmy().getNumOfCavalries() - units.get(UnitName.CAVALRIES);
+        from.getArmy().setNumOfCavalries(horse);
+
+        System.out.print(horse);
+
+
+        int siege = from.getArmy().getNumOfSiegeEquipment() - units.get(UnitName.SIEGE_EQUIPMENTS);
+        from.getArmy().setNumOfSiegeEquipment(siege);
+
+        System.out.print(siege);
+
+
+        int archers = from.getArmy().getNumOfArchers() - units.get(UnitName.ARCHERS);
+        from.getArmy().setNumOfArchers(archers);
+
+        System.out.print(archers);
+
+
+
+
+
+
+
+
     }
 }
