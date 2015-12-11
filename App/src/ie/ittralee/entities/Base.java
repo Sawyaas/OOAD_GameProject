@@ -109,7 +109,8 @@ public class Base {
         /* If the defensive side has lost, its base is destroyed */
 
         if (attackerWon)
-            this.destroy();
+            //this.destroy();
+                this.conquer(winningSide.commander);
 
         /* Show the final battle screen */
 
@@ -146,6 +147,13 @@ public class Base {
         for (int i = 0; i < baseList.size(); i++)
             if (baseList.get(i) == this)
                 baseList.remove(i);
+    }
+
+    public void conquer(Commander newOwner){
+        this.commander = newOwner;
+        System.out.println("The attacker has conquered the Base. ");
+
+
     }
 
     public void displayInfo() {
