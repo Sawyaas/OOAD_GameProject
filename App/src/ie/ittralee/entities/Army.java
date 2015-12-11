@@ -104,7 +104,7 @@ public class Army {
     }
     /* This method is used to select an attacking force from the full army*/
     public Army delegatingUnits(){
-       System.out.println("Player chooses the units he wants to attack ");
+       System.out.println("Player chooses the units he wants to attack " );
         Army subArmy = new Army(20, 8, 12, 4, 2, 5);
         return subArmy;
     }
