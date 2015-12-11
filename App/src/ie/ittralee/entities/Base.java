@@ -39,11 +39,14 @@ public class Base {
     /* --- METHODS --- */
 
     public void attack(Base attacker) {
+        Army subArmy = attacker.army.delegatingUnits();
+
         /* Calculate the total attack value of the offensive army
          * and the total defence value of the defencive army */
 
-        int attackValue = attacker.army.sumAttackValues();
+        int attackValue = subArmy.sumAttackValues();
         int defenceValue = this.army.sumDefenceValues();
+
 
         /* Determine the winner by comparing the attack value
          * and the defence value */
