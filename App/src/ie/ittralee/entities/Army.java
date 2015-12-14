@@ -102,6 +102,7 @@ public class Army {
 
         return sum;
     }
+
     /* This method is used to select an attacking force from the full army*/
     public Army delegatingUnits(){
        System.out.println("Player chooses the units he wants to attack " );

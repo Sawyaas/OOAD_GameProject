@@ -34,37 +34,32 @@ public class Commander {
     /* --- METHODS --- */
 
     public static void transferResources(Commander from, Commander to, java.util.Map<ResourceName, Integer> resources) {
+        System.out.println("* Transfer of resources... *");
 
+        int food = resources.get(ResourceName.FOOD);
+        int stone = resources.get(ResourceName.STONE);
+        int wood = resources.get(ResourceName.WOOD);
 
-        int food =  from.getStock().getFoodQuantity() - resources.get(ResourceName.FOOD);
-        from.getStock().setFoodQuantity(food);
+        int foodFrom =  from.getStock().getFoodQuantity() - food;
+        from.getStock().setFoodQuantity(foodFrom);
 
-        System.out.print(food);
+        int woodFrom = from.getStock().getWoodQuantity() - wood;
+        from.getStock().setWoodQuantity(woodFrom);
 
-        int wood = from.getStock().getWoodQuantity() - resources.get(ResourceName.WOOD);
-        from.getStock().setWoodQuantity(wood);
+        int stoneFrom = from.getStock().getStoneQuantity() - stone;
+        from.getStock().setStoneQuantity(stoneFrom);
 
-        System.out.print(wood);
-
-        int stone = from.getStock().getStoneQuantity() - resources.get(ResourceName.STONE);
-        from.getStock().setStoneQuantity(stone);
-
-        System.out.print(stone);
-
-        int foodTo = to.getStock().getFoodQuantity() +  resources.get(ResourceName.FOOD);
+        int foodTo = to.getStock().getFoodQuantity() + food;
         to.getStock().setFoodQuantity(foodTo);
 
-        System.out.print(foodTo);
-
-        int woodTo = to.getStock().getWoodQuantity() + resources.get(ResourceName.WOOD);
+        int woodTo = to.getStock().getWoodQuantity() + wood;
         to.getStock().setWoodQuantity(woodTo);
 
-        System.out.print(woodTo);
-
-        int stoneTo = to.getStock().getStoneQuantity() + resources.get(ResourceName.STONE);
+        int stoneTo = to.getStock().getStoneQuantity() + stone;
         to.getStock().setStoneQuantity(stoneTo);
 
-        System.out.print(stoneTo);
-
+        System.out.println("*\tFood: " + food);
+        System.out.println("*\tStone: " + stone);
+        System.out.println("*\tWood: " + wood + '\n');
     }
 }

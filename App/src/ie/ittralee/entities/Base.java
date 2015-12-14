@@ -38,8 +38,8 @@ public class Base {
 
     /* --- METHODS --- */
 
-    public void attack(Base attacker) {
-        Army subArmy = attacker.army.delegatingUnits();
+    public void attack(Base attackerBase) {
+        Army subArmy = attackerBase.army.delegatingUnits();
 
         /* Calculate the total attack value of the offensive army
          * and the total defence value of the defencive army */
@@ -70,8 +70,8 @@ public class Base {
         /* Give a random part of the resources and of the remaining units of the losing side
          * to the winning side */
 
-        Base winningSide = (attackerWon) ? attacker : this;
-        Base losingSide = (attackerWon) ? this : attacker;
+        Base winningSide = (attackerWon) ? attackerBase : this;
+        Base losingSide = (attackerWon) ? this : attackerBase;
         Resources looserStock = losingSide.commander.getStock();
         Army looserArmy = losingSide.army;
         Map<ResourceName, Integer> resourcesGiven = new HashMap<>();
@@ -116,7 +116,7 @@ public class Base {
 
         String result = (attackerWon) ? "won" : "lost";
         String finalOutput =
-                "\n----------\nFinal Battle Screen:\n" +
+                "----------\nFinal Battle Screen:\n" +
                 "You have " + result + "!\n" +
                 "Resources " + result + ":\n" +
                 "\t- " + food + " Food\n" +
@@ -128,8 +128,9 @@ public class Base {
                 "\t- " + spearmen + " Spearmen\n" +
                 "\t- " + cavalries + " Cavalries\n" +
                 "\t- " + siegeEquipments + " Siege Equipments\n" +
-                "\t- " + archers + " Archers" +
-                "\n----------";
+                "\t- " + archers + " Archers\n" +
+                ((attackerWon) ? "You have conquered the base.\n" : "") +
+                "----------";
         System.out.println(finalOutput);
     }
 
@@ -151,9 +152,7 @@ public class Base {
 
     public void conquer(Commander newOwner){
         this.commander = newOwner;
-        System.out.println("The attacker has conquered the Base. ");
-
-
+        System.out.println("* The attacker has conquered the base *\n");
     }
 
     public void displayInfo() {
@@ -174,48 +173,38 @@ public class Base {
     }
 
     public static void transferUnits(Base from, Base to, java.util.Map<UnitName, Integer> units) {
+        System.out.println("* Transfer of units... *");
 
-        int swords = from.getArmy().getNumOfSwordmen() - units.get(UnitName.SWORDMEN);
-        from.getArmy().setNumOfSwordmen(swords);
+        int swordmen = units.get(UnitName.SWORDMEN);
+        int spearmen = units.get(UnitName.SPEARMEN);
+        int dogs = units.get(UnitName.DOGS);
+        int cavalries = units.get(UnitName.CAVALRIES);
+        int siegeEquipments = units.get(UnitName.SIEGE_EQUIPMENTS);
+        int archers = units.get(UnitName.ARCHERS);
 
-        System.out.print(swords);
+        int swordmenFrom = from.getArmy().getNumOfSwordmen() - swordmen;
+        from.getArmy().setNumOfSwordmen(swordmenFrom);
 
+        int spearmenFrom = from.getArmy().getNumOfSpearmen() - spearmen;
+        from.getArmy().setNumOfSpearmen(spearmenFrom);
 
-        int spears = from.getArmy().getNumOfSpearmen() - units.get(UnitName.SPEARMEN);
-        from.getArmy().setNumOfSpearmen(spears);
+        int dogsFrom = from.getArmy().getNumOfDogs() - dogs;
+        from.getArmy().setNumOfDogs(dogsFrom);
 
-        System.out.print(spears);
+        int cavalriesFrom = from.getArmy().getNumOfCavalries() - cavalries;
+        from.getArmy().setNumOfCavalries(cavalriesFrom);
 
+        int siegeEquipmentsFrom = from.getArmy().getNumOfSiegeEquipment() - siegeEquipments;
+        from.getArmy().setNumOfSiegeEquipment(siegeEquipmentsFrom);
 
-        int dogs = from.getArmy().getNumOfDogs() - units.get(UnitName.DOGS);
-        from.getArmy().setNumOfDogs(dogs);
+        int archersFrom = from.getArmy().getNumOfArchers() - archers;
+        from.getArmy().setNumOfArchers(archersFrom);
 
-        System.out.print(dogs);
-
-
-        int horse = from.getArmy().getNumOfCavalries() - units.get(UnitName.CAVALRIES);
-        from.getArmy().setNumOfCavalries(horse);
-
-        System.out.print(horse);
-
-
-        int siege = from.getArmy().getNumOfSiegeEquipment() - units.get(UnitName.SIEGE_EQUIPMENTS);
-        from.getArmy().setNumOfSiegeEquipment(siege);
-
-        System.out.print(siege);
-
-
-        int archers = from.getArmy().getNumOfArchers() - units.get(UnitName.ARCHERS);
-        from.getArmy().setNumOfArchers(archers);
-
-        System.out.print(archers);
-
-
-
-
-
-
-
-
+        System.out.println("*\tSwordmen: " + swordmen);
+        System.out.println("*\tSpearmen: " + spearmen);
+        System.out.println("*\tDogs: " + dogs);
+        System.out.println("*\tCavalries: " + cavalries);
+        System.out.println("*\tSiege Equipments: " + siegeEquipments);
+        System.out.println("*\tArchers: " + archers + '\n');
     }
 }
