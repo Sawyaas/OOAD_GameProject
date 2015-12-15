@@ -200,6 +200,24 @@ public class Base {
         int archersFrom = from.getArmy().getNumOfArchers() - archers;
         from.getArmy().setNumOfArchers(archersFrom);
 
+        int swordmenTo = to.getArmy().getNumOfSwordmen() + swordmen;
+        to.getArmy().setNumOfSwordmen(swordmenTo);
+
+        int spearmenTo = to.getArmy().getNumOfSpearmen() + spearmen;
+        to.getArmy().setNumOfSpearmen(spearmenTo);
+
+        int dogsTo = to.getArmy().getNumOfDogs() + dogs;
+        to.getArmy().setNumOfDogs(dogsTo);
+
+        int cavalriesTo = to.getArmy().getNumOfCavalries() + cavalries;
+        to.getArmy().setNumOfCavalries(cavalriesTo);
+
+        int siegeEquipmentsTo = to.getArmy().getNumOfSiegeEquipment() + siegeEquipments;
+        to.getArmy().setNumOfSiegeEquipment(siegeEquipmentsTo);
+
+        int archersTo = to.getArmy().getNumOfArchers() + archers;
+        to.getArmy().setNumOfArchers(archersTo);
+
         System.out.println("*\tSwordmen: " + swordmen);
         System.out.println("*\tSpearmen: " + spearmen);
         System.out.println("*\tDogs: " + dogs);
